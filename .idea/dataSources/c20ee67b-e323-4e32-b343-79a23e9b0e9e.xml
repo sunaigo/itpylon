@@ -1,0 +1,1734 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="@10.1.7.37">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.4">
+    <root id="1"/>
+    <schema id="2" parent="1" name="bi">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="bi_new"/>
+    <schema id="4" parent="1" name="cs_zy"/>
+    <schema id="5" parent="1" name="information_schema"/>
+    <schema id="6" parent="1" name="lixue"/>
+    <schema id="7" parent="1" name="luyangbi"/>
+    <schema id="8" parent="1" name="mazidamall"/>
+    <schema id="9" parent="1" name="mysql"/>
+    <schema id="10" parent="1" name="performance_schema"/>
+    <schema id="11" parent="1" name="sqlplus"/>
+    <schema id="12" parent="1" name="test"/>
+    <schema id="13" parent="1" name="test01"/>
+    <schema id="14" parent="1" name="vcyberpay"/>
+    <schema id="15" parent="1" name="vcyberpay2.0"/>
+    <schema id="16" parent="1" name="vcyberpay3.0"/>
+    <table id="17" parent="2" name="data6"/>
+    <table id="18" parent="2" name="id1"/>
+    <table id="19" parent="2" name="id2"/>
+    <table id="20" parent="2" name="id3"/>
+    <table id="21" parent="2" name="summary"/>
+    <table id="22" parent="2" name="summary_bak20170721"/>
+    <table id="23" parent="2" name="userinfo">
+      <Comment>用户基本信息</Comment>
+    </table>
+    <table id="24" parent="2" name="userinfo_00">
+      <Comment>用户基本信息</Comment>
+    </table>
+    <table id="25" parent="2" name="userinfo_01">
+      <Comment>用户基本信息</Comment>
+    </table>
+    <table id="26" parent="2" name="userinfo_02">
+      <Comment>用户基本信息</Comment>
+    </table>
+    <table id="27" parent="2" name="userinfo_03">
+      <Comment>用户基本信息</Comment>
+    </table>
+    <table id="28" parent="2" name="userinfo_04">
+      <Comment>用户基本信息</Comment>
+    </table>
+    <table id="29" parent="2" name="userinfo_05">
+      <Comment>用户基本信息</Comment>
+    </table>
+    <table id="30" parent="2" name="userinfo_06">
+      <Comment>用户基本信息</Comment>
+    </table>
+    <table id="31" parent="2" name="userinfo_07">
+      <Comment>用户基本信息</Comment>
+    </table>
+    <table id="32" parent="2" name="userinfo_08">
+      <Comment>用户基本信息</Comment>
+    </table>
+    <table id="33" parent="2" name="userinfo_09">
+      <Comment>用户基本信息</Comment>
+    </table>
+    <table id="34" parent="2" name="userinfo_10">
+      <Comment>用户基本信息</Comment>
+    </table>
+    <table id="35" parent="2" name="userinfo_bak"/>
+    <table id="36" parent="2" name="userinfo_copy">
+      <Comment>用户基本信息</Comment>
+    </table>
+    <table id="37" parent="2" name="userinfo_online">
+      <Comment>用户基本信息</Comment>
+    </table>
+    <table id="38" parent="2" name="userinfo_wg">
+      <Comment>用户基本信息</Comment>
+    </table>
+    <table id="39" parent="2" name="userinfo_wg_copy">
+      <Comment>用户基本信息</Comment>
+    </table>
+    <routine id="40" parent="2" name="p_summary_update">
+      <RoutineKind>procedure</RoutineKind>
+    </routine>
+    <column id="41" parent="17" name="id">
+      <Position>1</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="42" parent="17" name="username">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="43" parent="17" name="companyname">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="44" parent="17" name="phonenumber">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="45" parent="17" name="created">
+      <Position>5</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="46" parent="17" name="appname">
+      <Position>6</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="47" parent="18" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <index id="48" parent="18" name="id">
+      <ColNames>id</ColNames>
+    </index>
+    <column id="49" parent="19" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <index id="50" parent="19" name="index_id">
+      <ColNames>id</ColNames>
+    </index>
+    <column id="51" parent="20" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <index id="52" parent="20" name="index_id">
+      <ColNames>id</ColNames>
+    </index>
+    <column id="53" parent="21" name="id">
+      <Position>1</Position>
+      <Comment>1 按月份统计 2按车厂 3按性别 4按地区 5按车型</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="54" parent="21" name="type">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="55" parent="21" name="stisname">
+      <Position>3</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="56" parent="21" name="stisvalue">
+      <Position>4</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="57" parent="21" name="apptype">
+      <Position>5</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="58" parent="21" name="ex1">
+      <Position>6</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <key id="59" parent="21" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="60" parent="22" name="id">
+      <Position>1</Position>
+      <Comment>1 按月份统计 2按车厂 3按性别 4按地区 5按车型</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="61" parent="22" name="type">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="62" parent="22" name="stisname">
+      <Position>3</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="63" parent="22" name="stisvalue">
+      <Position>4</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="64" parent="22" name="apptype">
+      <Position>5</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="65" parent="22" name="ex1">
+      <Position>6</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="66" parent="23" name="Id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="67" parent="23" name="userid">
+      <Position>2</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="68" parent="23" name="username">
+      <Position>3</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="69" parent="23" name="realname">
+      <Position>4</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="70" parent="23" name="sex">
+      <Position>5</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="71" parent="23" name="companyname">
+      <Position>6</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="72" parent="23" name="phonenumber">
+      <Position>7</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="73" parent="23" name="created">
+      <Position>8</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="74" parent="23" name="lastlogintime">
+      <Position>9</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="75" parent="23" name="province">
+      <Position>10</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="76" parent="23" name="city">
+      <Position>11</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="77" parent="23" name="area">
+      <Position>12</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="78" parent="23" name="email">
+      <Position>13</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="79" parent="23" name="appname">
+      <Position>14</Position>
+      <Comment>系统名称</Comment>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="80" parent="23" name="apptype">
+      <Position>15</Position>
+      <Comment>后服务，车上</Comment>
+      <DataType>varchar(45)|0</DataType>
+      <DefaultExpression>&apos;后服务&apos;</DefaultExpression>
+    </column>
+    <column id="81" parent="23" name="importbatchno">
+      <Position>16</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="82" parent="23" name="cartype">
+      <Position>17</Position>
+      <Comment>车型</Comment>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <index id="83" parent="23" name="i_appname_apptype_userinfo">
+      <ColNames>apptype
+appname</ColNames>
+    </index>
+    <index id="84" parent="23" name="i_cartype_apptype_userinfor">
+      <ColNames>apptype
+cartype</ColNames>
+    </index>
+    <index id="85" parent="23" name="i_created_apptype_userinfo">
+      <ColNames>cartype
+created</ColNames>
+    </index>
+    <index id="86" parent="23" name="i_province_apptye_userinfo">
+      <ColNames>apptype
+province</ColNames>
+    </index>
+    <index id="87" parent="23" name="i_sex_apptype_userinfo">
+      <ColNames>sex
+apptype</ColNames>
+    </index>
+    <key id="88" parent="23" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>Id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="89" parent="24" name="Id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="90" parent="24" name="userid">
+      <Position>2</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="91" parent="24" name="username">
+      <Position>3</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="92" parent="24" name="realname">
+      <Position>4</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="93" parent="24" name="sex">
+      <Position>5</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="94" parent="24" name="companyname">
+      <Position>6</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="95" parent="24" name="phonenumber">
+      <Position>7</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="96" parent="24" name="created">
+      <Position>8</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="97" parent="24" name="lastlogintime">
+      <Position>9</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="98" parent="24" name="province">
+      <Position>10</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="99" parent="24" name="city">
+      <Position>11</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="100" parent="24" name="area">
+      <Position>12</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="101" parent="24" name="email">
+      <Position>13</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="102" parent="24" name="appname">
+      <Position>14</Position>
+      <Comment>系统名称</Comment>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="103" parent="24" name="apptype">
+      <Position>15</Position>
+      <Comment>后服务，车上</Comment>
+      <DataType>varchar(45)|0</DataType>
+      <DefaultExpression>&apos;后服务&apos;</DefaultExpression>
+    </column>
+    <column id="104" parent="24" name="importbatchno">
+      <Position>16</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="105" parent="24" name="cartype">
+      <Position>17</Position>
+      <Comment>车型</Comment>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <index id="106" parent="24" name="i_appname_apptype_userinfo_00">
+      <ColNames>apptype
+appname</ColNames>
+    </index>
+    <index id="107" parent="24" name="i_cartype_apptype_userinfo_00">
+      <ColNames>apptype
+cartype</ColNames>
+    </index>
+    <index id="108" parent="24" name="i_created_apptype_userinfo_00">
+      <ColNames>cartype
+created</ColNames>
+    </index>
+    <index id="109" parent="24" name="i_province_apptye_userinfo_00">
+      <ColNames>apptype
+province</ColNames>
+    </index>
+    <index id="110" parent="24" name="i_sex_apptype_userinfo_00">
+      <ColNames>sex
+apptype</ColNames>
+    </index>
+    <key id="111" parent="24" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>Id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="112" parent="25" name="Id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="113" parent="25" name="userid">
+      <Position>2</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="114" parent="25" name="username">
+      <Position>3</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="115" parent="25" name="realname">
+      <Position>4</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="116" parent="25" name="sex">
+      <Position>5</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="117" parent="25" name="companyname">
+      <Position>6</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="118" parent="25" name="phonenumber">
+      <Position>7</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="119" parent="25" name="created">
+      <Position>8</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="120" parent="25" name="lastlogintime">
+      <Position>9</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="121" parent="25" name="province">
+      <Position>10</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="122" parent="25" name="city">
+      <Position>11</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="123" parent="25" name="area">
+      <Position>12</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="124" parent="25" name="email">
+      <Position>13</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="125" parent="25" name="appname">
+      <Position>14</Position>
+      <Comment>系统名称</Comment>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="126" parent="25" name="apptype">
+      <Position>15</Position>
+      <Comment>后服务，车上</Comment>
+      <DataType>varchar(45)|0</DataType>
+      <DefaultExpression>&apos;后服务&apos;</DefaultExpression>
+    </column>
+    <column id="127" parent="25" name="importbatchno">
+      <Position>16</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="128" parent="25" name="cartype">
+      <Position>17</Position>
+      <Comment>车型</Comment>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <index id="129" parent="25" name="i_appname_apptype_userinfo_01">
+      <ColNames>apptype
+appname</ColNames>
+    </index>
+    <index id="130" parent="25" name="i_cartype_apptype_userinfo_01">
+      <ColNames>apptype
+cartype</ColNames>
+    </index>
+    <index id="131" parent="25" name="i_created_apptype_userinfo_01">
+      <ColNames>cartype
+created</ColNames>
+    </index>
+    <index id="132" parent="25" name="i_province_apptye_userinfo_01">
+      <ColNames>apptype
+province</ColNames>
+    </index>
+    <index id="133" parent="25" name="i_sex_apptype_userinfo_01">
+      <ColNames>sex
+apptype</ColNames>
+    </index>
+    <key id="134" parent="25" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>Id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="135" parent="26" name="Id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="136" parent="26" name="userid">
+      <Position>2</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="137" parent="26" name="username">
+      <Position>3</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="138" parent="26" name="realname">
+      <Position>4</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="139" parent="26" name="sex">
+      <Position>5</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="140" parent="26" name="companyname">
+      <Position>6</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="141" parent="26" name="phonenumber">
+      <Position>7</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="142" parent="26" name="created">
+      <Position>8</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="143" parent="26" name="lastlogintime">
+      <Position>9</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="144" parent="26" name="province">
+      <Position>10</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="145" parent="26" name="city">
+      <Position>11</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="146" parent="26" name="area">
+      <Position>12</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="147" parent="26" name="email">
+      <Position>13</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="148" parent="26" name="appname">
+      <Position>14</Position>
+      <Comment>系统名称</Comment>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="149" parent="26" name="apptype">
+      <Position>15</Position>
+      <Comment>后服务，车上</Comment>
+      <DataType>varchar(45)|0</DataType>
+      <DefaultExpression>&apos;后服务&apos;</DefaultExpression>
+    </column>
+    <column id="150" parent="26" name="importbatchno">
+      <Position>16</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="151" parent="26" name="cartype">
+      <Position>17</Position>
+      <Comment>车型</Comment>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <index id="152" parent="26" name="i_appname_apptype_userinfo_02">
+      <ColNames>apptype
+appname</ColNames>
+    </index>
+    <index id="153" parent="26" name="i_cartype_apptype_userinfo_02">
+      <ColNames>apptype
+cartype</ColNames>
+    </index>
+    <index id="154" parent="26" name="i_created_apptype_userinfo_02">
+      <ColNames>cartype
+created</ColNames>
+    </index>
+    <index id="155" parent="26" name="i_province_apptye_userinfo_02">
+      <ColNames>apptype
+province</ColNames>
+    </index>
+    <index id="156" parent="26" name="i_sex_apptype_userinfo_02">
+      <ColNames>sex
+apptype</ColNames>
+    </index>
+    <key id="157" parent="26" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>Id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="158" parent="27" name="Id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="159" parent="27" name="userid">
+      <Position>2</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="160" parent="27" name="username">
+      <Position>3</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="161" parent="27" name="realname">
+      <Position>4</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="162" parent="27" name="sex">
+      <Position>5</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="163" parent="27" name="companyname">
+      <Position>6</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="164" parent="27" name="phonenumber">
+      <Position>7</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="165" parent="27" name="created">
+      <Position>8</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="166" parent="27" name="lastlogintime">
+      <Position>9</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="167" parent="27" name="province">
+      <Position>10</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="168" parent="27" name="city">
+      <Position>11</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="169" parent="27" name="area">
+      <Position>12</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="170" parent="27" name="email">
+      <Position>13</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="171" parent="27" name="appname">
+      <Position>14</Position>
+      <Comment>系统名称</Comment>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="172" parent="27" name="apptype">
+      <Position>15</Position>
+      <Comment>后服务，车上</Comment>
+      <DataType>varchar(45)|0</DataType>
+      <DefaultExpression>&apos;后服务&apos;</DefaultExpression>
+    </column>
+    <column id="173" parent="27" name="importbatchno">
+      <Position>16</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="174" parent="27" name="cartype">
+      <Position>17</Position>
+      <Comment>车型</Comment>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <index id="175" parent="27" name="i_appname_apptype_userinfo_03">
+      <ColNames>apptype
+appname</ColNames>
+    </index>
+    <index id="176" parent="27" name="i_cartype_apptype_userinfo_03">
+      <ColNames>apptype
+cartype</ColNames>
+    </index>
+    <index id="177" parent="27" name="i_created_apptype_userinfo_03">
+      <ColNames>cartype
+created</ColNames>
+    </index>
+    <index id="178" parent="27" name="i_province_apptye_userinfo_03">
+      <ColNames>apptype
+province</ColNames>
+    </index>
+    <index id="179" parent="27" name="i_sex_apptype_userinfo_03">
+      <ColNames>sex
+apptype</ColNames>
+    </index>
+    <key id="180" parent="27" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>Id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="181" parent="28" name="Id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="182" parent="28" name="userid">
+      <Position>2</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="183" parent="28" name="username">
+      <Position>3</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="184" parent="28" name="realname">
+      <Position>4</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="185" parent="28" name="sex">
+      <Position>5</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="186" parent="28" name="companyname">
+      <Position>6</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="187" parent="28" name="phonenumber">
+      <Position>7</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="188" parent="28" name="created">
+      <Position>8</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="189" parent="28" name="lastlogintime">
+      <Position>9</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="190" parent="28" name="province">
+      <Position>10</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="191" parent="28" name="city">
+      <Position>11</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="192" parent="28" name="area">
+      <Position>12</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="193" parent="28" name="email">
+      <Position>13</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="194" parent="28" name="appname">
+      <Position>14</Position>
+      <Comment>系统名称</Comment>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="195" parent="28" name="apptype">
+      <Position>15</Position>
+      <Comment>后服务，车上</Comment>
+      <DataType>varchar(45)|0</DataType>
+      <DefaultExpression>&apos;后服务&apos;</DefaultExpression>
+    </column>
+    <column id="196" parent="28" name="importbatchno">
+      <Position>16</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="197" parent="28" name="cartype">
+      <Position>17</Position>
+      <Comment>车型</Comment>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <index id="198" parent="28" name="i_appname_apptype_userinfo_04">
+      <ColNames>apptype
+appname</ColNames>
+    </index>
+    <index id="199" parent="28" name="i_cartype_apptype_userinfo_04">
+      <ColNames>apptype
+cartype</ColNames>
+    </index>
+    <index id="200" parent="28" name="i_created_apptype_userinfo_04">
+      <ColNames>cartype
+created</ColNames>
+    </index>
+    <index id="201" parent="28" name="i_province_apptye_userinfo_04">
+      <ColNames>apptype
+province</ColNames>
+    </index>
+    <index id="202" parent="28" name="i_sex_apptype_userinfo_04">
+      <ColNames>sex
+apptype</ColNames>
+    </index>
+    <key id="203" parent="28" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>Id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="204" parent="29" name="Id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="205" parent="29" name="userid">
+      <Position>2</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="206" parent="29" name="username">
+      <Position>3</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="207" parent="29" name="realname">
+      <Position>4</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="208" parent="29" name="sex">
+      <Position>5</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="209" parent="29" name="companyname">
+      <Position>6</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="210" parent="29" name="phonenumber">
+      <Position>7</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="211" parent="29" name="created">
+      <Position>8</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="212" parent="29" name="lastlogintime">
+      <Position>9</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="213" parent="29" name="province">
+      <Position>10</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="214" parent="29" name="city">
+      <Position>11</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="215" parent="29" name="area">
+      <Position>12</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="216" parent="29" name="email">
+      <Position>13</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="217" parent="29" name="appname">
+      <Position>14</Position>
+      <Comment>系统名称</Comment>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="218" parent="29" name="apptype">
+      <Position>15</Position>
+      <Comment>后服务，车上</Comment>
+      <DataType>varchar(45)|0</DataType>
+      <DefaultExpression>&apos;后服务&apos;</DefaultExpression>
+    </column>
+    <column id="219" parent="29" name="importbatchno">
+      <Position>16</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="220" parent="29" name="cartype">
+      <Position>17</Position>
+      <Comment>车型</Comment>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <index id="221" parent="29" name="i_appname_apptype_userinfo_05">
+      <ColNames>apptype
+appname</ColNames>
+    </index>
+    <index id="222" parent="29" name="i_cartype_apptype_userinfo_05">
+      <ColNames>apptype
+cartype</ColNames>
+    </index>
+    <index id="223" parent="29" name="i_created_apptype_userinfo_05">
+      <ColNames>cartype
+created</ColNames>
+    </index>
+    <index id="224" parent="29" name="i_province_apptye_userinfo_05">
+      <ColNames>apptype
+province</ColNames>
+    </index>
+    <index id="225" parent="29" name="i_sex_apptype_userinfo_05">
+      <ColNames>sex
+apptype</ColNames>
+    </index>
+    <key id="226" parent="29" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>Id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="227" parent="30" name="Id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="228" parent="30" name="userid">
+      <Position>2</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="229" parent="30" name="username">
+      <Position>3</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="230" parent="30" name="realname">
+      <Position>4</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="231" parent="30" name="sex">
+      <Position>5</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="232" parent="30" name="companyname">
+      <Position>6</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="233" parent="30" name="phonenumber">
+      <Position>7</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="234" parent="30" name="created">
+      <Position>8</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="235" parent="30" name="lastlogintime">
+      <Position>9</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="236" parent="30" name="province">
+      <Position>10</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="237" parent="30" name="city">
+      <Position>11</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="238" parent="30" name="area">
+      <Position>12</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="239" parent="30" name="email">
+      <Position>13</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="240" parent="30" name="appname">
+      <Position>14</Position>
+      <Comment>系统名称</Comment>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="241" parent="30" name="apptype">
+      <Position>15</Position>
+      <Comment>后服务，车上</Comment>
+      <DataType>varchar(45)|0</DataType>
+      <DefaultExpression>&apos;后服务&apos;</DefaultExpression>
+    </column>
+    <column id="242" parent="30" name="importbatchno">
+      <Position>16</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="243" parent="30" name="cartype">
+      <Position>17</Position>
+      <Comment>车型</Comment>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <index id="244" parent="30" name="i_appname_apptype_userinfo_06">
+      <ColNames>apptype
+appname</ColNames>
+    </index>
+    <index id="245" parent="30" name="i_cartype_apptype_userinfo_06">
+      <ColNames>apptype
+cartype</ColNames>
+    </index>
+    <index id="246" parent="30" name="i_created_apptype_userinfo_06">
+      <ColNames>cartype
+created</ColNames>
+    </index>
+    <index id="247" parent="30" name="i_province_apptye_userinfo_06">
+      <ColNames>apptype
+province</ColNames>
+    </index>
+    <index id="248" parent="30" name="i_sex_apptype_userinfo_06">
+      <ColNames>sex
+apptype</ColNames>
+    </index>
+    <key id="249" parent="30" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>Id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="250" parent="31" name="Id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="251" parent="31" name="userid">
+      <Position>2</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="252" parent="31" name="username">
+      <Position>3</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="253" parent="31" name="realname">
+      <Position>4</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="254" parent="31" name="sex">
+      <Position>5</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="255" parent="31" name="companyname">
+      <Position>6</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="256" parent="31" name="phonenumber">
+      <Position>7</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="257" parent="31" name="created">
+      <Position>8</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="258" parent="31" name="lastlogintime">
+      <Position>9</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="259" parent="31" name="province">
+      <Position>10</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="260" parent="31" name="city">
+      <Position>11</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="261" parent="31" name="area">
+      <Position>12</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="262" parent="31" name="email">
+      <Position>13</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="263" parent="31" name="appname">
+      <Position>14</Position>
+      <Comment>系统名称</Comment>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="264" parent="31" name="apptype">
+      <Position>15</Position>
+      <Comment>后服务，车上</Comment>
+      <DataType>varchar(45)|0</DataType>
+      <DefaultExpression>&apos;后服务&apos;</DefaultExpression>
+    </column>
+    <column id="265" parent="31" name="importbatchno">
+      <Position>16</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="266" parent="31" name="cartype">
+      <Position>17</Position>
+      <Comment>车型</Comment>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <index id="267" parent="31" name="i_appname_apptype_userinfo_07">
+      <ColNames>apptype
+appname</ColNames>
+    </index>
+    <index id="268" parent="31" name="i_cartype_apptype_userinfo_07">
+      <ColNames>apptype
+cartype</ColNames>
+    </index>
+    <index id="269" parent="31" name="i_created_apptype_userinfo_07">
+      <ColNames>cartype
+created</ColNames>
+    </index>
+    <index id="270" parent="31" name="i_province_apptye_userinfo_07">
+      <ColNames>apptype
+province</ColNames>
+    </index>
+    <index id="271" parent="31" name="i_sex_apptype_userinfo_07">
+      <ColNames>sex
+apptype</ColNames>
+    </index>
+    <key id="272" parent="31" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>Id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="273" parent="32" name="Id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="274" parent="32" name="userid">
+      <Position>2</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="275" parent="32" name="username">
+      <Position>3</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="276" parent="32" name="realname">
+      <Position>4</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="277" parent="32" name="sex">
+      <Position>5</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="278" parent="32" name="companyname">
+      <Position>6</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="279" parent="32" name="phonenumber">
+      <Position>7</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="280" parent="32" name="created">
+      <Position>8</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="281" parent="32" name="lastlogintime">
+      <Position>9</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="282" parent="32" name="province">
+      <Position>10</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="283" parent="32" name="city">
+      <Position>11</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="284" parent="32" name="area">
+      <Position>12</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="285" parent="32" name="email">
+      <Position>13</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="286" parent="32" name="appname">
+      <Position>14</Position>
+      <Comment>系统名称</Comment>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="287" parent="32" name="apptype">
+      <Position>15</Position>
+      <Comment>后服务，车上</Comment>
+      <DataType>varchar(45)|0</DataType>
+      <DefaultExpression>&apos;后服务&apos;</DefaultExpression>
+    </column>
+    <column id="288" parent="32" name="importbatchno">
+      <Position>16</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="289" parent="32" name="cartype">
+      <Position>17</Position>
+      <Comment>车型</Comment>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <index id="290" parent="32" name="i_appname_apptype_userinfo_08">
+      <ColNames>apptype
+appname</ColNames>
+    </index>
+    <index id="291" parent="32" name="i_cartype_apptype_userinfo_08">
+      <ColNames>apptype
+cartype</ColNames>
+    </index>
+    <index id="292" parent="32" name="i_created_apptype_userinfo_08">
+      <ColNames>cartype
+created</ColNames>
+    </index>
+    <index id="293" parent="32" name="i_province_apptye_userinfo_08">
+      <ColNames>apptype
+province</ColNames>
+    </index>
+    <index id="294" parent="32" name="i_sex_apptype_userinfo_08">
+      <ColNames>sex
+apptype</ColNames>
+    </index>
+    <key id="295" parent="32" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>Id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="296" parent="33" name="Id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="297" parent="33" name="userid">
+      <Position>2</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="298" parent="33" name="username">
+      <Position>3</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="299" parent="33" name="realname">
+      <Position>4</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="300" parent="33" name="sex">
+      <Position>5</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="301" parent="33" name="companyname">
+      <Position>6</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="302" parent="33" name="phonenumber">
+      <Position>7</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="303" parent="33" name="created">
+      <Position>8</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="304" parent="33" name="lastlogintime">
+      <Position>9</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="305" parent="33" name="province">
+      <Position>10</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="306" parent="33" name="city">
+      <Position>11</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="307" parent="33" name="area">
+      <Position>12</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="308" parent="33" name="email">
+      <Position>13</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="309" parent="33" name="appname">
+      <Position>14</Position>
+      <Comment>系统名称</Comment>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="310" parent="33" name="apptype">
+      <Position>15</Position>
+      <Comment>后服务，车上</Comment>
+      <DataType>varchar(45)|0</DataType>
+      <DefaultExpression>&apos;后服务&apos;</DefaultExpression>
+    </column>
+    <column id="311" parent="33" name="importbatchno">
+      <Position>16</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="312" parent="33" name="cartype">
+      <Position>17</Position>
+      <Comment>车型</Comment>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <index id="313" parent="33" name="i_appname_apptype_userinfo_09">
+      <ColNames>apptype
+appname</ColNames>
+    </index>
+    <index id="314" parent="33" name="i_cartype_apptype_userinfo_09">
+      <ColNames>apptype
+cartype</ColNames>
+    </index>
+    <index id="315" parent="33" name="i_created_apptype_userinfo_09">
+      <ColNames>cartype
+created</ColNames>
+    </index>
+    <index id="316" parent="33" name="i_province_apptye_userinfo_09">
+      <ColNames>apptype
+province</ColNames>
+    </index>
+    <index id="317" parent="33" name="i_sex_apptype_userinfo_09">
+      <ColNames>sex
+apptype</ColNames>
+    </index>
+    <key id="318" parent="33" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>Id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="319" parent="34" name="Id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="320" parent="34" name="userid">
+      <Position>2</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="321" parent="34" name="username">
+      <Position>3</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="322" parent="34" name="realname">
+      <Position>4</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="323" parent="34" name="sex">
+      <Position>5</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="324" parent="34" name="companyname">
+      <Position>6</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="325" parent="34" name="phonenumber">
+      <Position>7</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="326" parent="34" name="created">
+      <Position>8</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="327" parent="34" name="lastlogintime">
+      <Position>9</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="328" parent="34" name="province">
+      <Position>10</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="329" parent="34" name="city">
+      <Position>11</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="330" parent="34" name="area">
+      <Position>12</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="331" parent="34" name="email">
+      <Position>13</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="332" parent="34" name="appname">
+      <Position>14</Position>
+      <Comment>系统名称</Comment>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="333" parent="34" name="apptype">
+      <Position>15</Position>
+      <Comment>后服务，车上</Comment>
+      <DataType>varchar(45)|0</DataType>
+      <DefaultExpression>&apos;后服务&apos;</DefaultExpression>
+    </column>
+    <column id="334" parent="34" name="importbatchno">
+      <Position>16</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="335" parent="34" name="cartype">
+      <Position>17</Position>
+      <Comment>车型</Comment>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <index id="336" parent="34" name="i_appname_apptype_userinfo_10">
+      <ColNames>apptype
+appname</ColNames>
+    </index>
+    <index id="337" parent="34" name="i_cartype_apptype_userinfo_10">
+      <ColNames>apptype
+cartype</ColNames>
+    </index>
+    <index id="338" parent="34" name="i_created_apptype_userinfo_10">
+      <ColNames>cartype
+created</ColNames>
+    </index>
+    <index id="339" parent="34" name="i_province_apptye_userinfo_10">
+      <ColNames>apptype
+province</ColNames>
+    </index>
+    <index id="340" parent="34" name="i_sex_apptype_userinfo_10">
+      <ColNames>sex
+apptype</ColNames>
+    </index>
+    <key id="341" parent="34" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>Id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="342" parent="35" name="Id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="343" parent="35" name="userid">
+      <Position>2</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="344" parent="35" name="username">
+      <Position>3</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="345" parent="35" name="realname">
+      <Position>4</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="346" parent="35" name="sex">
+      <Position>5</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="347" parent="35" name="companyname">
+      <Position>6</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="348" parent="35" name="phonenumber">
+      <Position>7</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="349" parent="35" name="created">
+      <Position>8</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="350" parent="35" name="lastlogintime">
+      <Position>9</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="351" parent="35" name="province">
+      <Position>10</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="352" parent="35" name="city">
+      <Position>11</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="353" parent="35" name="area">
+      <Position>12</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="354" parent="35" name="email">
+      <Position>13</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="355" parent="35" name="appname">
+      <Position>14</Position>
+      <Comment>系统名称</Comment>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="356" parent="35" name="apptype">
+      <Position>15</Position>
+      <Comment>后服务，车上</Comment>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="357" parent="36" name="Id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="358" parent="36" name="userid">
+      <Position>2</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="359" parent="36" name="username">
+      <Position>3</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="360" parent="36" name="realname">
+      <Position>4</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="361" parent="36" name="sex">
+      <Position>5</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="362" parent="36" name="companyname">
+      <Position>6</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="363" parent="36" name="phonenumber">
+      <Position>7</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="364" parent="36" name="created">
+      <Position>8</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="365" parent="36" name="lastlogintime">
+      <Position>9</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="366" parent="36" name="province">
+      <Position>10</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="367" parent="36" name="city">
+      <Position>11</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="368" parent="36" name="area">
+      <Position>12</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="369" parent="36" name="email">
+      <Position>13</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="370" parent="36" name="appname">
+      <Position>14</Position>
+      <Comment>系统名称</Comment>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="371" parent="36" name="apptype">
+      <Position>15</Position>
+      <Comment>后服务，车上</Comment>
+      <DataType>varchar(45)|0</DataType>
+      <DefaultExpression>&apos;后服务&apos;</DefaultExpression>
+    </column>
+    <column id="372" parent="36" name="importbatchno">
+      <Position>16</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <key id="373" parent="36" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>Id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="374" parent="37" name="Id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="375" parent="37" name="userid">
+      <Position>2</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="376" parent="37" name="username">
+      <Position>3</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="377" parent="37" name="realname">
+      <Position>4</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="378" parent="37" name="sex">
+      <Position>5</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="379" parent="37" name="companyname">
+      <Position>6</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="380" parent="37" name="phonenumber">
+      <Position>7</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="381" parent="37" name="created">
+      <Position>8</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="382" parent="37" name="lastlogintime">
+      <Position>9</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="383" parent="37" name="province">
+      <Position>10</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="384" parent="37" name="city">
+      <Position>11</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="385" parent="37" name="area">
+      <Position>12</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="386" parent="37" name="email">
+      <Position>13</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="387" parent="37" name="appname">
+      <Position>14</Position>
+      <Comment>系统名称</Comment>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="388" parent="37" name="apptype">
+      <Position>15</Position>
+      <Comment>后服务，车上</Comment>
+      <DataType>varchar(45)|0</DataType>
+      <DefaultExpression>&apos;后服务&apos;</DefaultExpression>
+    </column>
+    <key id="389" parent="37" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>Id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="390" parent="38" name="Id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="391" parent="38" name="userid">
+      <Position>2</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="392" parent="38" name="username">
+      <Position>3</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="393" parent="38" name="realname">
+      <Position>4</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="394" parent="38" name="sex">
+      <Position>5</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="395" parent="38" name="companyname">
+      <Position>6</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="396" parent="38" name="phonenumber">
+      <Position>7</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="397" parent="38" name="created">
+      <Position>8</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="398" parent="38" name="lastlogintime">
+      <Position>9</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="399" parent="38" name="province">
+      <Position>10</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="400" parent="38" name="city">
+      <Position>11</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="401" parent="38" name="area">
+      <Position>12</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="402" parent="38" name="email">
+      <Position>13</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="403" parent="38" name="appname">
+      <Position>14</Position>
+      <Comment>系统名称</Comment>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="404" parent="38" name="apptype">
+      <Position>15</Position>
+      <Comment>后服务，车上</Comment>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="405" parent="38" name="cartype">
+      <Position>16</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <key id="406" parent="38" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>Id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="407" parent="39" name="Id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="408" parent="39" name="userid">
+      <Position>2</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="409" parent="39" name="username">
+      <Position>3</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="410" parent="39" name="realname">
+      <Position>4</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="411" parent="39" name="sex">
+      <Position>5</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="412" parent="39" name="companyname">
+      <Position>6</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="413" parent="39" name="phonenumber">
+      <Position>7</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="414" parent="39" name="created">
+      <Position>8</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="415" parent="39" name="lastlogintime">
+      <Position>9</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="416" parent="39" name="province">
+      <Position>10</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="417" parent="39" name="city">
+      <Position>11</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="418" parent="39" name="area">
+      <Position>12</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="419" parent="39" name="email">
+      <Position>13</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="420" parent="39" name="appname">
+      <Position>14</Position>
+      <Comment>系统名称</Comment>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="421" parent="39" name="apptype">
+      <Position>15</Position>
+      <Comment>后服务，车上</Comment>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="422" parent="39" name="cartype">
+      <Position>16</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <key id="423" parent="39" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>Id</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>

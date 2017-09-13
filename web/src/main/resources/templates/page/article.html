@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>itpylon:[[${article.title}]]</title>
+    <link rel="stylesheet" href="/css/bootstrap.css"/>
+    <style type="text/css">
+        @import "/css/bootstrap.min.css";
+        @import "/css/editormd.css";
+        @import "/css/editormd.preview.css";
+    </style>
+</head>
+<body>
+<div th:replace="~{fragments/header :: header}"></div>
+
+<div class="container-fluid">
+    <!--左-->
+    <div class="col-md-2 hidden-sm">
+        <div th:replace="~{fragments/leftnav :: leftnav}"></div>
+    </div>
+    <!--中-->
+    <div class="col-md-7">
+        <!--深度导航-->
+        <div class="container-fluid">
+            <ul class="breadcrumb">
+                <!--/*@thymesVar id="breads" type="pres.itpylon.domain.Classified"*/-->
+                <li th:each="bread : ${breads}"><a th:href="'/' + ${bread.title}">[[${bread.title}]]</a><span class="divider">/</span></li>
+                <li class="active">[[${article.title}]]</li>
+            </ul>
+        </div>
+        <!--文章-->
+        <div class="container-fluid" id="article">
+            <h2>[[${article.title}]]</h2>
+            <div class="col-md-2">
+                <span class="label label-default">[[${article.kindName}]]</span>
+            </div>
+            <div class="col-md-3">
+                <!--浏览量 -->
+            </div>
+            <div class="col-md-3">
+                作者:[[${article.author}]]
+            </div>
+            <div class="col-md-4">
+                发表于 [[${#dates.format(article.createTime, 'yyyy-MM-dd HH:mm')}]]
+            </div>
+            <div id="markdownView">
+                <textarea style="display:none;"></textarea>
+            </div>
+        </div>
+    </div>
+    <!--右-->
+    <div class="col-md-3 hidden-sm">
+        <h3>TOC</h3>
+        <div class="container-fluid markdown-body editormd-preview-container" id="custom-toc-container">
+            #custom-toc-container
+        </div>
+    </div>
+    <script src="../../static/js/jquery.min.js" th:src="@{/js/jquery.min.js}"></script>
+    <script src="../../static/lib/marked.min.js" th:src="@{/lib/marked.min.js}"></script>
+    <script src="../../static/lib/prettify.min.js" th:src="@{/lib/prettify.min.js}"></script>
+    <script src="../../static/lib/raphael.min.js" th:src="@{/lib/raphael.min.js}"></script>
+    <script src="../../static/lib/underscore.min.js" th:src="@{/lib/underscore.min.js}"></script>
+    <script src="../../static/lib/sequence-diagram.min.js" th:src="@{/lib/sequence-diagram.min.js}"></script>
+    <script src="../../static/lib/flowchart.min.js" th:src="@{/lib/flowchart.min.js}"></script>
+    <script src="../../static/lib/jquery.flowchart.min.js" th:src="@{/lib/jquery.flowchart.min.js}"></script>
+    <script src="../../static/js/editormd.js" th:src="@{/js/editormd.js}"></script>
+    <script th:inline="javascript">
+        $(function () {
+            markdownView = editormd.markdownToHTML("markdownView", {
+                markdown: [[${article.body}]],
+                htmlDecode: "style,script,iframe",
+                tocm: true,
+                tocContainer: "#custom-toc-container",
+                emoji: true,
+                taskList: true,
+                tex: true,
+                flowChart: true,
+                sequenceDiagram: true
+            });
+
+        });
+    </script>
+</div>
+
+<div th:replace="~{fragments/footer :: footer}"></div>
+</body>
+</html>

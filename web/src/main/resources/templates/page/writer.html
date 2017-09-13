@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>新文章</title>
+    <style type="text/css">
+        @import "/css/bootstrap.min.css";
+        @import "/css/editormd.css";
+    </style>
+    <script src="../../static/js/vue.js" th:src="@{/js/vue.js}"></script>
+</head>
+<body>
+
+<div class="container-fluid">
+
+    <div class="container-fluid">
+
+        <div class="col-md-6">
+            <div id="title" class="input-group">
+                <span class="input-group-addon">标题</span>
+                <input class="form-control" placeholder="单击键入标题" v-model="title">
+            </div>
+        </div>
+
+
+        <!--按钮组-->
+        <div id="btns" class="col-md-6 btn-group">
+            <button @click="changeToolbarStatus" type="button" class="btn btn-default"
+                    :class="{active:!toolbarStatus}">
+                {{toolbarStatusText}}
+            </button>
+            <button type="button" @click="preview" class="btn btn-default" :class="{active:previewStatus}">
+                {{previewText}}
+            </button>
+            <button type="button" class="btn btn-default" onclick="window.location.href='/'">
+                返回首页
+            </button>
+        </div>
+
+    </div>
+
+    <div class="container-fluid">
+        <!--编辑区-->
+        <div id="editormd"></div>
+    </div>
+    <div class="container-fluid">
+        <div class="col-md-11">
+
+        </div>
+        <div id="finish" class="col-md-1">
+            <button @click="submit" type="button" class="btn btn-primary btn-lg">提交</button>
+        </div>
+    </div>
+
+</div>
+
+
+<div th:replace="~{fragments/footer :: footer}"></div>
+
+<script src="../../static/js/jquery.min.js" th:src="@{/js/jquery.min.js}"></script>
+<script src="../../static/js/bootstrap.js" th:src="@{/js/bootstrap.js}"></script>
+<script src="../../static/js/editormd.js" th:src="@{/js/editormd.js}"></script>
+<script th:inline="javascript">
+
+    var editor = editormd("editormd", {
+        width: "100%",
+        height: 820,
+        path: '/lib/',
+        theme: "light",
+        previewTheme: "light",
+        editorTheme: "default",
+        markdown: "",
+        codeFold: true,
+        saveHTMLToTextarea: true,
+        searchReplace: true,
+        htmlDecode: "style,script,iframe|on*",
+        emoji: true,
+        taskList: true,
+        tocm: true,
+        tex: true,
+        flowChart: true,
+        sequenceDiagram: true,
+        imageUpload: true,
+        imageFormats: ["jpg", "jpeg", "gif", "png", "bmp", "webp"],
+        imageUploadURL: "./php/upload.php"
+    });
+
+    var btns = new Vue({
+        el: '#btns',
+        data: {
+            title: "",
+            toolbarStatus: true,
+            toolbarStatusText: '隐藏工具栏',
+            previewText: '查看效果',
+            previewStatus: false
+        },
+        methods: {
+            changeToolbarStatus: function () {
+                if (this.toolbarStatus) {
+                    editor.hideToolbar();
+                    this.toolbarStatus = false;
+                    this.toolbarStatusText = '显示工具栏'
+                } else {
+                    editor.showToolbar();
+                    this.toolbarStatus = true;
+                    this.toolbarStatusText = '隐藏工具栏'
+                }
+            },
+            preview: function () {
+                editor.previewing();
+                if (this.previewStatus) {
+                    this.previewStatus = false;
+                    this.previewText = '查看效果'
+                } else {
+                    this.previewStatus = true;
+                    this.previewText = '继续编辑'
+                }
+            },
+            fullscreen: function () {
+                editor.fullscreen();
+            }
+        }
+    });
+
+
+    var title = new Vue({
+        el: "#title",
+        data: {
+            title: ""
+        }
+    });
+
+    var finish;
+    finish = new Vue({
+        el: "#finish",
+        data: {
+            msg: 'msg'
+        },
+        methods: {
+            submit: function () {
+                var form = $("<form method='post' action='http://localhost:8080/article/saveArticle'></form>");
+
+                form.append($("<input type='hidden' name='title' value='" + title.title + "'>"));
+
+                form.append($("<input type='hidden' name='md' value='" + editor.getMarkdown() + "'>"));
+
+                $(document.body).append(form);
+
+                form.submit();
+
+            }
+        }
+    });
+
+</script>
+
+</body>
+</html>

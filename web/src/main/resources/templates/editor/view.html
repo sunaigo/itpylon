@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>view</title>
+</head>
+<body>
+<div data-th-fragment="view">
+    <style type="text/css">
+        @import "/css/bootstrap.min.css";
+        @import "/css/editormd.css";
+        @import "/css/editormd.preview.css";
+    </style>
+
+    <div class="container-fluid">
+        <!--左-->
+        <div class="col-md-2">
+            <ul class="nav nav-list well">
+                <li class="nav-header">列表标题</li>
+                <li class="active"><a href="#">首页</a></li>
+                <li><a href="#">库</a></li>
+                <li><a href="#">应用</a></li>
+                <li class="nav-header">功能列表</li>
+                <li><a href="#">资料</a></li>
+                <li><a href="#">设置</a></li>
+                <li class="divider"></li>
+                <li><a href="#">帮助</a></li>
+            </ul>
+        </div>
+        <!--中-->
+        <div class="col-md-7">
+            <!--深度导航-->
+            <div class="container-fluid">
+                <ul class="breadcrumb">
+                    <li><a href="#">主页</a> <span class="divider">/</span></li>
+                    <li><a href="#">类目</a> <span class="divider">/</span></li>
+                    <li class="active">主题</li>
+                </ul>
+            </div>
+            <!--文章-->
+            <div class="container-fluid" id="article">
+                <h2>[[${Article.article.title}]]</h2>
+                <div class="col-md-2">
+                    <span class="label label-default">[[${Article.article.kind}]]</span>
+                </div>
+                <div class="col-md-3">
+                    <!--浏览量 -->
+                </div>
+                <div class="col-md-3">
+                    作者:[[${Article.article.author}]]
+                </div>
+                <div class="col-md-4">
+                    时间 [[${#dates.format(article.createTime, 'yyyy-MM-dd HH:mm')}]]
+                </div>
+                <div id="markdownView">
+                    <textarea style="display:none;"></textarea>
+                </div>
+            </div>
+        </div>
+        <!--右-->
+        <div class="col-md-3">
+            <h3>TOC</h3>
+            <div class="container-fluid markdown-body editormd-preview-container" id="custom-toc-container">
+                #custom-toc-container
+            </div>
+        </div>
+        <script src="../../static/js/jquery.min.js" th:src="@{/js/jquery.min.js}"></script>
+        <script src="../../static/lib/marked.min.js" th:src="@{/lib/marked.min.js}"></script>
+        <script src="../../static/lib/prettify.min.js" th:src="@{/lib/prettify.min.js}"></script>
+        <script src="../../static/lib/raphael.min.js" th:src="@{/lib/raphael.min.js}"></script>
+        <script src="../../static/lib/underscore.min.js" th:src="@{/lib/underscore.min.js}"></script>
+        <script src="../../static/lib/sequence-diagram.min.js" th:src="@{/lib/sequence-diagram.min.js}"></script>
+        <script src="../../static/lib/flowchart.min.js" th:src="@{/lib/flowchart.min.js}"></script>
+        <script src="../../static/lib/jquery.flowchart.min.js" th:src="@{/lib/jquery.flowchart.min.js}"></script>
+        <script src="../../static/js/editormd.js" th:src="@{/js/editormd.js}"></script>
+        <script th:inline="javascript">
+            $(function () {
+                markdownView = editormd.markdownToHTML("markdownView", {
+                    markdown: [[${Article.article.body}]],//+ "\r\n" + $("#append-test").text(),
+                    //htmlDecode      : true,       // 开启 HTML 标签解析，为了安全性，默认不开启
+                    htmlDecode: "style,script,iframe",  // you can filter tags decode
+                    //toc             : false,
+                    tocm: true,    // Using [TOCM]
+                    tocContainer: "#custom-toc-container", // 自定义 ToC 容器层
+                    //gfm             : false,
+                    //tocDropdown     : true,
+                    // markdownSourceCode : true, // 是否保留 Markdown 源码，即是否删除保存源码的 Textarea 标签
+                    emoji: true,
+                    taskList: true,
+                    tex: true,  // 默认不解析
+                    flowChart: true,  // 默认不解析
+                    sequenceDiagram: true  // 默认不解析
+                });
+
+            });
+        </script>
+    </div>
+</div>
+</body>
+</html>

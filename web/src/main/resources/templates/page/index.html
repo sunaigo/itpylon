@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>itpylon-杂牌博客</title>
+    <style type="text/css">
+        @import "/css/bootstrap.min.css";
+
+        .md {
+            max-height: 100px;
+            min-height: 100px;
+            overflow-y: hidden;
+        }
+
+    </style>
+</head>
+<body>
+<div th:replace="~{fragments/header :: header}"></div>
+
+<div class="container-fluid">
+    <div class="col-md-2 hidden-sm">
+        <div th:replace="~{fragments/leftnav :: leftnav}"></div>
+    </div>
+    <div class="col-md-7">
+        <!--导航-->
+        <div class="container-fluid">
+            <ul class="breadcrumb">
+            <li th:each="bread : ${breads}"><a th:href="'/' + ${bread.title}">[[${bread.title}]]</a><span class="divider">/</span></li>
+            </ul>
+        </div>
+        <!--文章列表-->
+        <div class="container-fluid">
+            <div class="container-fluid" th:each="article : ${alist}" style="max-height: 20%">
+                <h3 contenteditable="false">
+                    <a th:href="'/article/' + ${article.id}" style="color: #000000">[[${article.title}]]</a>
+                </h3>
+                <div class="md">[[${article.body}]]</div>
+                <div class="col-md-2">
+                    <span class="label label-default">[[${article.kindName}]]</span>
+                </div>
+                <div class="col-md-6">
+                    <!--浏览量-->
+                </div>
+                <div class="col-md-4">
+                    发表于 [[${#dates.format(article.createTime, 'yyyy-MM-dd HH:mm')}]]
+                </div>
+            </div>
+
+        </div>
+        <!--翻页-->
+        <div class="container-fluid text-center">
+            <ul class="pagination">
+                <li><a href="#">上一页</a></li>
+                <li class="active"><a href="#">1</a></li>
+                <li class="disabled"><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">下一页</a></li>
+            </ul>
+
+            <!--<div th:replace="~{fragments/page :: page}">...</div>-->
+        </div>
+    </div>
+    <div class="col-md-3 visible-md">
+
+    </div>
+
+</div>
+
+<div th:replace="~{fragments/footer :: footer}"></div>
+</body>
+</html>

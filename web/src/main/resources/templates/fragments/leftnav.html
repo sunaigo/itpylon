@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div data-th-fragment="leftnav">
+    <ul class="nav well nav-pills nav-stacked">
+        <li class="nav-header">文章分类</li>
+        <li th:each="clazz : ${classified}"><a th:href="'/' + ${clazz.title}">[[${clazz.title}]]</a></li>
+    </ul>
+</div>
+</body>
+</html>
