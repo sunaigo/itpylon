@@ -4,8 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
-import pres.itpylon.domain.Article;
-import pres.itpylon.domain.Classified;
+import pres.itpylon.entity.Article;
+import pres.itpylon.entity.Classified;
 import pres.itpylon.repository.ArticleRepository;
 import pres.itpylon.repository.ClassifiedRepository;
 

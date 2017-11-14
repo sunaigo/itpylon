@@ -23,7 +23,7 @@
         <!--深度导航-->
         <div class="container-fluid">
             <ul class="breadcrumb">
-                <!--/*@thymesVar id="breads" type="pres.itpylon.domain.Classified"*/-->
+                <!--/*@thymesVar id="breads" type="pres.itpylon.entity.Classified"*/-->
                 <li th:each="bread : ${breads}"><a th:href="'/' + ${bread.title}">[[${bread.title}]]</a><span class="divider">/</span></li>
                 <li class="active">[[${article.title}]]</li>
             </ul>

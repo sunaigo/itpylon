@@ -1,4 +1,4 @@
-package pres.itpylon.domain;
+package pres.itpylon.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

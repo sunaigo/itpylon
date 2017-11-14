@@ -7,7 +7,7 @@
 <body>
 <div data-th-fragment="breadnav">
     <ul class="breadcrumb">
-        <!--/*@thymesVar id="bread" type="pres.itpylon.domain.Classified"*/-->
+        <!--/*@thymesVar id="bread" type="pres.itpylon.entity.Classified"*/-->
         <li th:each="bread : ${breads}"><a th:href="'/' + ${bread.title}">[[${bread.title}]]</a><span class="divider">/</span></li>
     </ul>
 </div>

@@ -1,8 +1,7 @@
 package pres.itpylon.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Query;
-import pres.itpylon.domain.Article;
+import pres.itpylon.entity.Article;
 
 import java.util.List;
 

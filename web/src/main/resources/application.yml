@@ -1,11 +1,12 @@
 ﻿server:
-  port: 80
+  port: 8080
 
 spring:
   application:
     name: web
   datasource:
-      url: jdbc:mysql://127.0.0.1:3306/itpylon?characterEncoding=utf-8&useSSL=false
+      url: jdbc:mysql://127.0.0.1:3306/test?characterEncoding=utf-8&useSSL=false
       username: root
-      password: zhinengxigua
+      password: 000000
       driver-class-name: com.mysql.jdbc.Driver
+

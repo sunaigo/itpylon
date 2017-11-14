@@ -1,4 +1,4 @@
-package pres.itpylon.domain;
+package pres.itpylon.entity;
 
 import org.hibernate.validator.constraints.NotEmpty;
 

@@ -1,7 +1,7 @@
 package pres.itpylon.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import pres.itpylon.domain.Classified;
+import pres.itpylon.entity.Classified;
 
 import java.util.List;
 
